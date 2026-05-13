@@ -1,0 +1,24 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="eye" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#065f46"/>
+    </linearGradient>
+  </defs>
+  <rect width="48" height="48" rx="11" fill="url(#bg)"/>
+  <line x1="24" y1="7.4" x2="24" y2="11.5" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+  <circle cx="24" cy="5.6" r="1.9" fill="#fde68a"/>
+  <circle cx="24" cy="5.6" r="0.9" fill="white"/>
+  <rect x="10.5" y="12.5" width="27" height="20" rx="6" fill="white"/>
+  <rect x="13" y="15" width="22" height="15" rx="4" fill="none" stroke="#d1fae5" stroke-width="0.9"/>
+  <circle cx="19" cy="20.5" r="2.6" fill="url(#eye)"/>
+  <circle cx="29" cy="20.5" r="2.6" fill="url(#eye)"/>
+  <circle cx="19.9" cy="19.6" r="0.9" fill="white"/>
+  <circle cx="29.9" cy="19.6" r="0.9" fill="white"/>
+  <path d="M 19.5 26.5 Q 24 29 28.5 26.5" stroke="#047857" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <path d="M 24 33 Q 27.5 35.5 24.5 40" stroke="white" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+</svg>

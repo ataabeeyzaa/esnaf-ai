@@ -1,0 +1,30 @@
+# Render.com one-click deploy config for the backend.
+# Frontend stays on Vercel; this file only provisions FastAPI + SQLite.
+#
+# Usage:
+#   1) Push this repo to GitHub (already done at github.com/ataabeeyzaa/esnaf-ai)
+#   2) Sign in at render.com → New +
+#   3) "Blueprint" → Connect this repo → Render reads render.yaml automatically
+#   4) When prompted, paste your GEMINI_API_KEY into the env-var field
+#   5) After deploy, copy the service URL (e.g. https://esnaf-ai.onrender.com)
+#      and set it as NEXT_PUBLIC_API_URL on the Vercel project.
+
+services:
+  - type: web
+    name: esnaf-ai-backend
+    env: python
+    region: frankfurt
+    plan: free
+    rootDir: backend
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt && python -m app.seed
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GEMINI_MODEL
+        value: gemini-2.5-flash-lite
+      - key: DATABASE_URL
+        value: sqlite:///./esnaf.db
+      - key: PYTHON_VERSION
+        value: "3.11"
